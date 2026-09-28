@@ -1,0 +1,8 @@
+PocketSmartAI/.env.exampleAPP_NAME=PocketSmart AI
+ENVIRONMENT=development
+SECRET_KEY=replace-this-with-a-long-random-secret
+GEMINI_API_KEY=
+GEMINI_MODEL=gemini-2.5-flash
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+DATABASE_URL=sqlite:///./pocketsmart.db
+MAX_UPLOAD_MB=5
