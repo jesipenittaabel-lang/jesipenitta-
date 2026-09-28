@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner">
+
+    <div class="planner-head">
+
+        <p class="eyebrow">
+            HOME INTERIOR
+        </p>
+
+        <h1>
+            Build a smart room budget
+        </h1>
+
+        <p>
+            Tell us what you need;
+            recommendations are estimates,
+            not live inventory.
+        </p>
+
+    </div>
+
+
+    <form
+        class="planner-form"
+        id="homeForm"
+    >
+
+        <div class="form-grid">
+
+            <label>
+                Budget (₹)
+
+                <input
+                    type="number"
+                    name="budget"
+                    min="1"
+                    step="1"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Style
+
+                <input
+                    name="style"
+                    value="modern"
+                >
+            </label>
+
+
+            <label>
+                Rooms
+
+                <input
+                    name="rooms"
+                    placeholder="Living Room, Kitchen"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Items
+
+                <input
+                    name="items"
+                    placeholder="Lights, fan, dining table"
+                    required
+                >
+            </label>
+
+        </div>
+
+
+        <label>
+            Notes
+
+            <textarea
+                name="notes"
+                placeholder="Any preferences or constraints?"
+            ></textarea>
+        </label>
+
+
+        <button
+            class="button"
+            type="submit"
+        >
+            Generate Home Plan
+        </button>
+
+    </form>
+
+
+    <div id="result"></div>
+    <div class="room-image">
+       <img
+           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+           alt="Modern home interior"
+       >
+    </div>
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindPlanner(
+        'homeForm',
+        '/generate-home',
+        'json'
+    );
+</script>
+
+{% endblock %}

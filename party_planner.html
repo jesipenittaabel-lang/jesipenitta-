@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Planner · PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="planner">
+
+    <div class="planner-head">
+
+        <p class="eyebrow">
+            PARTY PLANNER
+        </p>
+
+        <h1>
+            Make the budget work for the event
+        </h1>
+
+        <p>
+            Allocate a starting budget across food,
+            venue, decoration and entertainment.
+        </p>
+
+    </div>
+
+
+    <form
+        class="planner-form"
+        id="partyForm"
+    >
+
+        <div class="form-grid">
+
+            <label>
+                Budget (₹)
+
+                <input
+                    type="number"
+                    name="budget"
+                    min="1"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Guests
+
+                <input
+                    type="number"
+                    name="guests"
+                    min="1"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Event type
+
+                <input
+                    name="event_type"
+                    placeholder="Birthday, wedding, corporate"
+                    required
+                >
+            </label>
+
+
+            <label>
+                Venue
+
+                <input
+                    name="venue"
+                    value="Home"
+                >
+            </label>
+
+
+            <label>
+                City
+
+                <input name="city">
+            </label>
+
+        </div>
+
+
+        <label>
+            Notes
+
+            <textarea
+                name="notes"
+            ></textarea>
+        </label>
+
+
+        <button
+            class="button"
+            type="submit"
+        >
+            Generate Party Plan
+        </button>
+
+    </form>
+
+
+    <div id="result"></div>
+
+</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+    bindPlanner(
+        'partyForm',
+        '/generate-party',
+        'json'
+    );
+</script>
+
+{% endblock %}

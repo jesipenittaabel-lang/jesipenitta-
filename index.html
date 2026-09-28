@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block title %}
+PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <p class="eyebrow">
+            AI-POWERED BUDGET PLANNING
+        </p>
+
+        <h1>
+            Plan smarter.<br>
+            <span>Spend with confidence.</span>
+        </h1>
+
+        <p>
+            Personalized ideas for home interiors,
+            parties, and jewelry—organized around
+            the budget you set.
+        </p>
+
+        <div class="actions">
+
+            <a
+                class="button"
+                href="/register"
+            >
+                Get Started
+            </a>
+
+            <a
+                class="button secondary"
+                href="#planners"
+            >
+                Explore planners
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="orb">
+            ✦
+        </div>
+
+        <h3>
+            PocketSmart AI
+        </h3>
+
+        <p>
+            Budget → Preferences → Recommendations
+        </p>
+
+    </div>
+
+</section>
+
+
+<section
+    id="planners"
+    class="section"
+>
+
+    <div class="section-head">
+
+        <p class="eyebrow">
+            OUR SMART BUDGET PLANNERS
+        </p>
+
+        <h2>
+            One assistant, three planning modes
+        </h2>
+
+    </div>
+
+
+    <div class="grid three">
+
+        <article class="card">
+
+            <div class="icon">
+                ⌂
+            </div>
+
+            <h3>
+                Home Interior
+            </h3>
+
+            <p>
+                Furniture, lighting, decor and
+                cooling ideas organized within
+                your room budget.
+            </p>
+
+            <a href="/register">
+                Plan a room →
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="icon">
+                ♢
+            </div>
+
+            <h3>
+                Party Planner
+            </h3>
+
+            <p>
+                Allocate spending across catering,
+                venue, decoration and entertainment.
+            </p>
+
+            <a href="/register">
+                Plan a party →
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="icon">
+                ◇
+            </div>
+
+            <h3>
+                Jewelry Planner
+            </h3>
+
+            <p>
+                Occasion and style matched jewelry
+                suggestions with optional outfit-image input.
+            </p>
+
+            <a href="/register">
+                Plan jewelry →
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+{% endblock %}

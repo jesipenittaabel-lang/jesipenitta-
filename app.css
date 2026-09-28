@@ -542,3 +542,40 @@ footer {
     }
 
 }
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.rec-item {
+    overflow: hidden;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.rec-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.rec-item-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .rec-image {
+        height: 200px;
+    }
+}
